@@ -1,0 +1,31 @@
+<div class="loginPageMazeProject">
+
+  <div class="loginPageTopNavbar">
+    <%= image_tag "mazeimage.png",class: "MazeImageLoginPage" %>
+    <h1  style="margin-left: 25px ; color: white"> MAZE </h1>
+  </div>
+  <hr color="#377DFF">
+
+
+  <div class="loginPageLoginConatiner">
+    <h2 style="color: white">Forgot your password?</h2>
+
+    <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div class="field ">
+        <%= f.label :email, class: "loginPageEmailPasswordText"%><br />
+        <%= f.email_field :email, class:"loginPageEmailTextField", autofocus: true, autocomplete: "email" %>
+      </div>
+
+
+      <div class="actions">
+        <%= f.submit "Send me reset password instructions" ,class:"loginPageLogInButton"%>
+      </div>
+    <% end %>
+
+    <%= render "devise/shared/links" ,class:"loginPageForgetPasswordText"%>
+
+  </div>
+</div>
+

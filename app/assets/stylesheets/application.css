@@ -1,0 +1,738 @@
+
+/*Login Page Maze*/
+
+.loginPageMazeProject{
+    background-image: url("earthImage.png");
+    width: 100.4%;;
+    height: 979px;
+    background-position: center;
+    background-size: cover;
+    margin-top: -20px;
+    margin-left: -7px;
+}
+
+.loginPageTopNavbar{
+    display: flex;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.MazeImageLoginPage{
+    height:60px;
+    margin-top: 10px;
+}
+.loginPageLoginConatiner{
+    width: 458px;
+    height: 458px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(21px);
+    border-radius: 16px;
+    padding: 10px;
+    position: relative;
+    top: 12%;
+}
+
+.loginPageEmailTextField{
+    width: 65% ;
+    padding: 12px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+.loginPagePasswordTextField {
+    width: 65% ;
+    padding: 12px;
+    margin-bottom: 25px;
+    border-radius: 6px;
+}
+.loginPageEmailPasswordText{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: -0.02em;
+    color: #F9FAFB;
+}
+.loginPageCheckBox{
+    width: 20px;
+    height: 20px;
+    border: 1px solid ;
+    border-radius: 2px;
+    float: left;
+    margin-left: 70px;
+}
+.loginPageRemeberMe {
+    font-family: 'Montserrat';
+    font-size: 16px;
+    line-height: 180%;
+    letter-spacing: -0.02em;
+    color: lightblue;
+    float: left;
+    margin-left: 6px;
+}
+.loginPageLogInButton{
+    position: relative;
+    width: 206px;
+    height: 48px;
+    background: #377DFF;
+    border-radius: 5px;
+    left: -65px;
+    margin-top: 20px ;
+}
+.loginPageForgetPasswordText{
+    color: white;
+}
+
+/*signUp Page*/
+
+.signUpPageMazeProject{
+    background-image: url("earthImage.png");
+    width: 100.4%;;
+    height: 979px;
+    background-position: center;
+    background-size: cover;
+    margin-top: -20px;
+    margin-left: -7px;
+}
+
+.signUpPageTopNavbar{
+    display: flex;
+    margin-left: 80px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.signUpPageSignUpConatiner{
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(152.97deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+    backdrop-filter: blur(21px);
+    border-radius: 16px;
+    padding: 10px;
+    position: relative;
+    top: 12%;
+}
+.signupPageEmailPasswordText{
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 200%;
+    letter-spacing: -0.02em;
+    color: #F9FAFB;
+}
+.SignUpPageNameEmailTextField{
+    width: 100%;
+    padding: 10%;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+.SignUpPagePasswordTextField{
+    width: 100%;
+    padding: 10%;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+.SignUpPagePasswordTextField2{
+    width: 100%;
+    padding: 10%;
+    margin-bottom: 30px;
+    border-radius: 6px;
+    top: 26px;
+    position: relative;
+}
+.alreadyHaveAccountLoginButton{
+    color: white;
+    float: left;
+    position: relative;
+    top: 35px;
+    left: -105px;
+}
+.signUpPageSigunUpButton{
+    position: relative;
+    width: 206px;
+    height: 48px;
+    background: #377DFF;
+    border-radius: 5px;
+    left: 98px;
+    float: left;
+}
+
+/*Index page*/
+
+
+.navbarTopMazeProject{
+    display: flex;
+}
+.mazeImgNavbar{
+    position: relative;
+    left: 1%;
+    top:27px;
+}
+.mazeTextNavbar{
+    position: relative;
+    height: -3px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: #606165;
+    left: 3%;
+    flex-grow: 0;
+}
+#searchPostNavbar{
+    position: relative;
+    left: 155px;
+    box-sizing: border-box;
+    width: 1150px;
+    height: 50px;
+    top: 16px;
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    border-radius: 14px;
+    background-image: url(/assets/search-ba7c8c8….png);
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 20px;
+    padding-top: 2px;
+    font-size: large;
+}
+.sidebar {
+    position: fixed;
+    top: -5px;
+    left: 15px;
+    margin-top: 100px;
+}
+
+.mazeProjectRightSidebar{
+    float: right;
+    position: relative;
+    float: right;
+    margin-right: 50px;
+    top: -73px;
+    /*background-color: aliceblue;*/
+    width: 300px;
+    height: auto;
+}
+.mazeProjectRightSidebarTopNavbar{
+    display: flex;
+}
+.mazeProjectRightSidebarUsersList{
+    display: flex;
+}
+.qwerty{
+    background-color: #2E2F30;
+}
+
+.logOutButtonMazeSideNavbar{
+    position: relative;
+    left: 47px;
+    top: -70px;
+    text-decoration: none;
+    color: black;
+}
+
+.feedImageButtonSideNavbar {
+    background-color: #377DFF;
+    border-radius: 14px;
+    width: 170px;
+}
+.sidebar a {
+    font-size: 22px;
+    display: block;
+    padding: 27px 13px 14px 16px;
+}
+
+.sidebar a:hover {
+    color: grey;
+}
+
+@media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 22px; margin-left: 10px}
+}
+
+.secondContainerMazeProject{
+    position: relative;
+    background: #F9FAFB;
+    left: 14%;
+    width: 65%;
+    height: auto;
+}
+.createPostContainer{
+    border-radius: 14px;
+    background: white;
+    width: 97%;
+    height: 175px;
+    margin: auto;
+}
+.secondConatinerPhotoVideoPic{
+    display: flex;
+    width: 37%;
+    position: relative;
+    height: 28px;
+    top: -82px;
+    margin-left: 70px;
+    padding: 9px;
+    justify-content: space-around;
+}
+.secondConatinerVideoPic{
+    display: flex;
+    width: 25%;
+    position: relative;
+    justify-content: space-evenly;
+    left: -15px;
+}
+.secondConatinerPhotoPic{
+    display: flex;
+    width: 25%;
+    position: relative;
+    justify-content: space-evenly;
+    left: -15px;
+}
+.secondConatinerFeelingPic{
+    display: flex;
+    width: 25%;
+    position: relative;
+    justify-content: space-evenly;
+    left: -15px;
+}
+.secondContainerCreatePostBar textarea{
+    width: 87%;
+    position: relative;
+    padding: 1%;
+    background: #F5F6F8;
+    border-radius: 14px;
+    margin: 27px;
+    left: 5%;
+    font-size: large;
+}
+.privatePublicDropButton{
+    position: relative;
+    top: -70px;
+    margin-left: 10px;
+    color: black;
+}
+.secondConatinerCreateArticleButton{
+    color: black;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: flex-end;
+}
+.secondConatinerCreateArticleButton input{
+    background: #377DFF;
+    border-radius: 10px;
+    width: 151px;
+    height: 46px;
+    top: -30%;
+    color: #FFFFFF;
+    margin-right: 81px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18.5px;
+    border: none;
+}
+
+.secondConatinerCreateArticleButton:hover input {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-underline-mode: bold;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.thirdContainerPostBody{
+    border-radius: 14px;
+    background: white;
+    width: 97%;
+    height: auto;
+    margin: auto;
+}
+.thirdContainerTitleBar{
+    width: 1205px;
+    position: relative;
+    padding: 1%;
+    border-radius: 14px;
+    left: 2.5%;
+}
+.thirdConatinerUserNameTimeStamp{
+    position: relative;
+    left: 50px;
+    top: -40px;
+}
+.thirdContainerUserName{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #606165;
+}
+.thirdContainerTimeStamp{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(96, 97, 101, 0.6);
+}
+.dropbtn {
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 70px;
+    position: relative;
+    top: -70px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    right: 83px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    top: -61px;
+    width: 108px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+}
+
+.thirdContainerBodyOfPost{
+    width: 87%;
+    position: relative;
+    padding: 1%;
+    border-radius: 14px;
+    left: 2.5%;
+}
+
+.thirdContainerBodyOfPost a{
+    text-decoration: none;
+    color: black;
+}
+.thirdContainerLikeCommentPics{
+    position: relative;
+    display: flex;
+    margin-left: 60px;
+}
+.thirdContainerLikePic{
+    display: flex;
+    width: 10%;
+    position: relative;
+    justify-content: space-evenly;
+    left: -15px;
+}
+.thirdContainerCommentPic{
+    display: flex;
+    position: relative;
+    margin-left: 130px;
+    justify-content: space-evenly;
+    width: 12%;
+}
+
+.thirdConatinerCreateComment input{
+    width: 79%;
+    position: relative;
+    padding: 1%;
+    background: #F5F6F8;
+    margin: 12px;
+    left: 2.5%;
+    font-size: large;
+    border-radius: 13px;
+    top: -18px;
+}
+
+.thirdConatinerShowComment{
+    width: 79%;
+    position: relative;
+    padding: 1%;
+    background: white;
+    margin: 12px;
+    left: 2.5%;
+    font-size: large;
+    border-radius: 13px;
+    top: -18px;
+}
+
+.thirdConatinerCreateCommentButton{
+    position: relative;
+    top: -85px;
+    float: right;
+    margin-right: 93px;
+    border-radius: 10px;
+    border: none;
+}
+.thirdConatinerCreateCommentButton input{
+    padding: 10px;
+    position: relative;
+    margin-right: 60px;
+}
+.thirdContainerCreateCommentIcon{
+    width:32px;
+    heigth:32px;
+    padding: 10px;
+}
+
+
+
+/*show page css*/
+
+
+
+.navbarTopMazeProjectShowPage{
+    display: flex;
+}
+.mazeImgNavbarShowPage{
+    position: relative;
+    left: 1%;
+    top:27px;
+}
+.mazeTextNavbarShowPage{
+    position: relative;
+    height: -3px;
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 31px;
+    letter-spacing: 0.03em;
+    color: #606165;
+    left: 3%;
+    flex-grow: 0;
+}
+#searchPostNavbarShowPage{
+    position: relative;
+    left: 150px;
+    box-sizing: border-box;
+    width: 761px;
+    height: 50px;
+    top: 20px;
+    border: 1px solid rgba(51, 51, 51, 0.3);
+    border-radius: 14px;
+    background-image: url('search.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    padding-top: 2px;
+    font-size: large;
+}
+.FeedButtonMazeSideNavbarShowPage{
+    position: relative;
+    display: flex;
+    left: 55px;
+    top: -76px;
+    text-decoration: none;
+}
+.mazeProjectLeftSidebarprofilelogoutImageConatiner{
+    position: relative;
+    top: -75px;
+}
+.logOutButtonMazeSideNavbarShowPage{
+    position: relative;
+    left: 47px;
+    top: -70px;
+    text-decoration: none;
+    color: black;
+}
+.ShowMazeProjectRightSideBar{
+    position: relative;
+    display: flex;
+    float: right;
+    top: -52px;
+    margin-right: 220px;
+}
+
+.ShowMazeProjectRightSideBarUserName{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 44px;
+    color: #606165;
+}
+.ShowMazeProjectRightSideBarProfilePic{
+    margin-left: 30px;
+}
+.secondContainerMazeProjectShowPage{
+    position: relative;
+    background: #F9FAFB;
+    left: 14%;
+    width: 74%;
+    height: auto;
+}
+.thirdContainerPostBodyShowPage{
+    border-radius: 14px;
+    background: white;
+    width: 97%;
+    height: auto;
+    margin: auto;
+}
+.thirdContainerTitleBarShowPage{
+    width: 1205px;
+    position: relative;
+    padding: 1%;
+    border-radius: 14px;
+    left: 2.5%;
+}
+.thirdConatinerUserNameTimeStampShowPage{
+    position: relative;
+    left: 50px;
+    top: -40px;
+}
+.thirdContainerUserNameShowPage{
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    color: #606165;
+}
+.thirdContainerTimeStampShowPage{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(96, 97, 101, 0.6);
+}
+
+.dropShowbtn {
+    color: black;
+    padding: 10px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 70px;
+    position: relative;
+    top: -70px;
+}
+
+.dropShowdown {
+    position: relative;
+    display: inline-block;
+    float: right;
+}
+
+.dropShowdown-content {
+    display: none;
+    position: relative;
+    right: 83px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+    z-index: 1;
+    top: -61px;
+    width: 108px;
+}
+
+.dropShowdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropShowdown-content a:hover {background-color: #f1f1f1;}
+
+.dropShowdown:hover .dropShowdown-content {
+    display: block;
+}
+
+.dropShowdown:hover .dropShowbtn {
+    background-color: #f1f1f1;
+}
+.thirdContainerLikeCommentPicsShowPage{
+    position: relative;
+    display: flex;
+    margin-left: 60px;
+}
+.thirdContainerLikePicShowPage{
+    display: flex;
+    width: 10%;
+    position: relative;
+    justify-content: space-evenly;
+    left: -15px;
+}
+.thirdContainerCommentPicShowPage{
+    display: flex;
+    position: relative;
+    margin-left: 130px;
+    justify-content: space-evenly;
+    width: 12%;
+}
+
+.thirdConatinerCreateCommentShowPage input{
+    width: 79%;
+    position: relative;
+    padding: 1%;
+    background: #F5F6F8;
+    margin: 12px;
+    left: 2.5%;
+    font-size: large;
+    border-radius: 13px;
+    top: -18px;
+}
+.thirdConatinerCreateCommentButtonShowPage{
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
+    top: -85px;
+    float: right;
+    margin-right: 106px;
+    border-radius: 10px;
+    border: none;
+}
+.thirdConatinerCreateCommentButtonShowPage input{
+    padding: 10px;
+    position: relative;
+    margin-right: 60px;
+}
+.thirdContainerCreateCommentIconShowPage{
+    width:35px;
+    heigth:35px;
+    padding: 10px;
+}
+.showPageShowAllComments{
+    width: 89%;
+    position: relative;
+    padding: 1%;
+    background: white;
+    margin: 12px;
+    left: 2.5%;
+    font-size: large;
+    border-radius: 13px;
+    top: -18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

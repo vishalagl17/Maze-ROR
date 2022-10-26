@@ -1,0 +1,75 @@
+<div class="signUpPageMazeProject">
+
+  <div class="signUpPageTopNavbar">
+    <%= image_tag "mazeimage.png", class: "MazeImageLoginPage" %>
+    <h1 style="margin-left: 25px ; color: white"> MAZE </h1>
+  </div>
+  <hr color="#377DFF">
+
+  <div class="signUpPageSignUpConatiner">
+    <h2 style="color: white">Create Account</h2>
+
+    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "devise/shared/error_messages", resource: resource %>
+
+      <div style="display: flex; justify-content: space-evenly">
+        <div class="field ">
+          <%= f.label :FirstName, class: "signupPageEmailPasswordText" %><br/>
+          <%= f.text_field :first_name, class: "SignUpPageNameEmailTextField", autofocus: true, autocomplete: "first_name" %>
+        </div>
+
+        <div class="field ">
+          <%= f.label :LastName, class: "signupPageEmailPasswordText" %><br/>
+          <%= f.text_field :last_name, class: "SignUpPageNameEmailTextField", autofocus: true, autocomplete: "last_name" %>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-evenly">
+        <div class="field ">
+          <%= f.label :email, class: "signupPageEmailPasswordText" %><br/>
+          <%= f.email_field :email, class: "SignUpPageNameEmailTextField", autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="field ">
+          <%= f.label :Phone, class: "signupPageEmailPasswordText" %><br/>
+          <%= f.number_field :phone_number, class: "SignUpPageNameEmailTextField", autofocus: true, autocomplete: "phone_number" %>
+        </div>
+      </div>
+
+      <div style="display: flex; justify-content: space-evenly">
+        <div class="field">
+          <%= f.label :password, class: "signupPageEmailPasswordText" %><br/>
+          <% if @minimum_password_length %>
+            <em class="signupPageEmailPasswordText">(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br/>
+          <%= f.password_field :password, class: "SignUpPagePasswordTextField", autocomplete: "new-password" %>
+        </div>
+
+        <div class="field">
+          <%= f.label :password_confirmation, class: "signupPageEmailPasswordText" %><br/>
+          <%= f.password_field :password_confirmation, class: "SignUpPagePasswordTextField2", autocomplete: "new-password" %>
+        </div>
+      </div>
+
+      <div class="actions">
+        <%= f.submit "Sign up", class: "signUpPageSigunUpButton" %><br>
+      </div>
+
+    <% end %>
+    <br>
+    <div class="alreadyHaveAccountLoginButton">
+      <%= "Already have an account?" %>
+      <%= render "devise/shared/links" %>
+    </div>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+

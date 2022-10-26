@@ -1,0 +1,16 @@
+<%= form_with model: post do |form|%>
+
+  <div class="secondContainerCreatePostBar">
+    <%= form.text_area :body, placeholder: "whats happening ?"%><br>
+  </div>
+
+  <div class="privatePublicDropButton">
+    <%= form.label :status %><br>
+    <%= form.select :status, ['public', 'private'], selected: 'public' %>
+  </div>
+
+  <div class="secondConatinerCreateArticleButton">
+    <%= form.submit %>
+  </div>
+
+<% end %>

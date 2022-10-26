@@ -1,0 +1,205 @@
+<div class="navbarTopMazeProject">
+    <div class="mazeImgNavbar">
+      <%= image_tag "mazeimage.png" %>
+    </div>
+    <div class="mazeTextNavbar">
+      <h1>Maze</h1>
+    </div>
+    <input type="text" id="searchPostNavbar" placeholder="Search for something here... ">
+</div>
+
+<div class="sidebar">
+  <a class="feedImageButtonSideNavbar"> <%=image_tag("feedImage2.png", style: "margin-right:22px")%> Feed</a>
+  <a> <%=image_tag("profileImage.png", style: "margin-right:22px") %>  Profile</a>
+  <a><%=image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
+  <a><%=image_tag("logoutImage.png", style: "margin-right:22px") %><%= link_to "Logout",destroy_user_session_path, data: { "turbo-method": :delete } , class: "logOutButtonMazeSideNavbar" %></a>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } } %>
+
+</div>
+
+<div class="mazeProjectRightSidebar">
+
+  <div class="mazeProjectRightSidebarTopNavbar">
+    <%= image_tag("userImageEllipse1.png") %>
+    <h4 style="margin-left: 80px; position: absolute;top: -14px">Vishal Agarwal</h4>
+  </div>
+
+  <h4 style="margin-left: 8px;">Users List</h4>
+
+
+  <% if current_user.has_role? :admin %>
+    <% @users.each do |user| %>
+      <div class="mazeProjectRightSidebarUsersList">
+        <%= image_tag("MazeImageCircle.png") %>
+        <%= user.first_name %><br/>
+        <%= user.last_name %><br/>
+        <p><%= user.email %></p><br/>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+<div class="secondContainerMazeProject">
+  <br>
+  <div class="createPostContainer">
+    <%= render "form", post: @newpost %>
+
+    <div class="secondConatinerPhotoVideoPic">
+      <div class="secondConatinerVideoPic">
+      <div><%= image_tag "video.png" %></div>
+      <div>Live Video</div>
+    </div>
+      <div class = "secondConatinerPhotoPic">
+      <div><%= image_tag "Video.png" %></div>
+      <div>Photo/Video</div>
+    </div>
+      <div class = "secondConatinerFeelingPic">
+      <div><%= image_tag "felling.png" %></div>
+      <div>Feeling</div>
+    </div>
+    </div>
+  </div>
+  <br>
+  <% if current_user.has_role? :admin %>
+    <% @posts.reverse.each do |post| %>
+
+      <div class="thirdContainerPostBody">
+
+        <div class="thirdContainerTitleBar">
+          <%= image_tag "mazeimage.png" %>
+          <div class="thirdConatinerUserNameTimeStamp">
+            <div class="thirdContainerUserName"><%=  post.user.first_name %> <%= post.user.last_name %><br></div>
+            <div class="thirdContainerTimeStamp"><%= time_ago_in_words(post.created_at)%>, public</div>
+          </div>
+        </div>
+
+        <div class="dropdown" >
+          <span class="dropbtn">...</span>
+          <div class="dropdown-content">
+            <%= link_to "Edit", edit_post_path(post) %>
+            <%= link_to "Destroy", post_path(post), data: {
+              turbo_method: :delete,
+              turbo_confirm: "Are you sure?"
+            } %>
+          </div>
+        </div>
+
+        <div class="thirdContainerBodyOfPost"><%= link_to post.body, post %>
+          <br>
+          <br>
+          <hr>
+          <br>
+          <div class="thirdContainerLikeCommentPics">
+            <div class="thirdContainerLikePic">
+              <div><%= image_tag "heart.png" %></div>
+              <div>  Like</div>
+            </div>
+
+            <div class="thirdContainerCommentPic">
+              <div><%= image_tag "comment.png" %></div>
+              <div><%= link_to "comment", post %></div>
+            </div>
+          </div>
+          <br>
+          <hr>
+        </div>
+
+        <% @post = post %>
+        <%= render 'comments/form'%>
+        <br>
+
+        <div class="thirdConatinerShowComment">
+          <%= post.comments.order('created_at DESC').first&.body %>
+        </div>
+        <%= render post.comments %>
+      <br>
+
+      </div>
+    <% end %>
+
+
+
+  <% else %>
+
+    <% @posts.reverse.each do |post| %>
+      <% if post.status == "public" %>
+        <div class="thirdContainerPostBody">
+
+          <div class="thirdContainerTitleBar">
+            <%= image_tag "mazeimage.png" %>
+            <div class="thirdConatinerUserNameTimeStamp">
+              <div class="thirdContainerUserName"><%=  post.user.first_name %> <%= post.user.last_name %><br></div>
+              <div class="thirdContainerTimeStamp"><%= time_ago_in_words(post.created_at)%>, public</div>
+            </div>
+          </div>
+
+          <div class="dropdown" >
+            <span class="dropbtn">...</span>
+            <div class="dropdown-content">
+              <%= link_to "Edit", edit_post_path(post) %>
+              <%= link_to "Destroy", post_path(post), data: {
+                turbo_method: :delete,
+                turbo_confirm: "Are you sure?"
+              } %>
+            </div>
+          </div>
+
+          <div class="thirdContainerBodyOfPost"><%= link_to post.body, post %>
+            <br>
+            <br>
+            <hr>
+            <br>
+            <div class="thirdContainerLikeCommentPics">
+              <div class="thirdContainerLikePic">
+                <div><%= image_tag "heart.png" %></div>
+                <div>  Like</div>
+              </div>
+
+              <div class="thirdContainerCommentPic">
+                <div><%= image_tag "comment.png" %></div>
+                <div><%= link_to "comment", post %></div>
+              </div>
+            </div>
+            <br>
+            <hr>
+          </div>
+
+          <% @post = post %>
+          <%= render 'comments/form'%>
+          <br>
+
+          <div class="thirdConatinerShowComment">
+            <%= post.comments.order('created_at DESC').first&.body %>
+          </div>
+          <%= render post.comments %>
+          <br>
+
+        </div>
+      <% end %>
+      <br>
+    <% end %>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+
+
+<% if user_signed_in? %>
+  Are you admin? <%= current_user.has_role? :admin %>
+<% end %>
+
+
+
+
+
+
+
+

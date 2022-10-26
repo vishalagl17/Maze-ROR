@@ -1,0 +1,22 @@
+<%= form_with model: [@post, @post.comments.build] do |form| %>
+<!--  <p>-->
+<!--    <%#= form.label :commenter %><br>-->
+    <%#= form.text_field :commenter %>
+<!--  </p>-->
+
+  <p>
+<!--    <%#= form.label :body %><br>-->
+  <div class="thirdConatinerCreateComment"><%= form.text_field :body, placeholder:"Write a comment.." %></div>
+  </p>
+
+  <p>
+    <button type="submit" class="thirdConatinerCreateCommentButton">
+      <%#= form.submit%>
+      <%= image_tag "commentbutton.png", class:"thirdContainerCreateCommentIcon" %></button>
+
+  </p>
+
+<% end %>
+
+
+
