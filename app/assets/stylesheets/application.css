@@ -222,8 +222,8 @@
 .mazeProjectRightSidebarUsersList{
     display: flex;
 }
-.qwerty{
-    background-color: #2E2F30;
+.mazeProjectRightSidebarUsersListname{
+    margin-left: 10px;
 }
 
 .logOutButtonMazeSideNavbar{

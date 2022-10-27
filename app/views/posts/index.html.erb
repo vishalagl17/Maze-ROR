@@ -17,25 +17,28 @@
 
 </div>
 
-<div class="mazeProjectRightSidebar">
-
-  <div class="mazeProjectRightSidebarTopNavbar">
-    <%= image_tag("userImageEllipse1.png") %>
-    <h4 style="margin-left: 80px; position: absolute;top: -14px">Vishal Agarwal</h4>
-  </div>
-
-  <h4 style="margin-left: 8px;">Users List</h4>
-
-
+<div>
   <% if current_user.has_role? :admin %>
-    <% @users.each do |user| %>
-      <div class="mazeProjectRightSidebarUsersList">
-        <%= image_tag("MazeImageCircle.png") %>
-        <%= user.first_name %><br/>
-        <%= user.last_name %><br/>
-        <p><%= user.email %></p><br/>
+    <div class="mazeProjectRightSidebar">
+
+      <div class="mazeProjectRightSidebarTopNavbar">
+        <%= image_tag("userImageEllipse1.png") %>
+        <h4 style="margin-left: 80px; position: absolute;top: -14px">Vishal Agarwal</h4>
       </div>
-    <% end %>
+
+      <h4 style="margin-left: 8px;">Users List</h4>
+
+
+
+      <% @users.each do |user| %>
+        <div class="mazeProjectRightSidebarUsersList">
+          <%= image_tag("MazeImageCircle.png") %>
+          <p class="mazeProjectRightSidebarUsersListname"><%= user.first_name %></p>
+          <p class="mazeProjectRightSidebarUsersListname"><%= user.last_name %></p>
+        </div>
+      <% end %>
+
+    </div>
   <% end %>
 </div>
 
