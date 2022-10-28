@@ -1,10 +1,54 @@
-<% @users.each do |user| %>
-  <br>
-  <strong>email:</strong>
-  <%= user.email %>
-  <strong>access locked?</strong>
-  <%= user.access_locked? %><br>
-  <%= link_to ban_user_path(user), method: :patch %>
-  <%= button_to 'ban', ban_user_path(user), method: :patch %>
-  <br>
-<% end %>
+<%# @users.each do |user| %>
+<!--  <br>-->
+<!--  <strong>email:</strong>-->
+  <%#= user.email %>
+<!--  <strong>access locked?</strong>-->
+<!--  <%#= user.access_locked? %><br>-->
+  <%#= link_to ban_user_path(user), method: :patch %>
+  <%#= button_to 'ban', ban_user_path(user), method: :patch %>
+<!--  <br>-->
+<%# end %>
+
+
+
+
+<div class="navbarTopMazeProject">
+  <div class="mazeImgNavbar">
+    <%= image_tag "mazeimage.png" %>
+  </div>
+  <div class="mazeTextNavbar">
+    <h1>Maze</h1>
+  </div>
+  <h1 class="manageUserManagement">User Management</h1>
+</div>
+
+<div class="sidebar">
+  <a> <%=image_tag("feedImage2.png", style: "margin-right:22px")%> Feed</a>
+  <a> <%=image_tag("profileImage.png", style: "margin-right:22px") %>  Profile</a>
+  <a  class="feedImageButtonSideNavbar"><%=image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
+  <a><%=image_tag("logoutImage.png", style: "margin-right:22px") %><%= link_to "Logout",destroy_user_session_path, data: { "turbo-method": :delete } , class: "logOutButtonMazeSideNavbar" %></a>
+  <%= button_to "Logout", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } } %>
+
+</div>
+
+<div class="mazeProjectRightSidebar">
+
+  <div class="mazeProjectRightSidebarTopNavbar">
+    <%= image_tag("userImageEllipse1.png") %>
+    <h4 style="margin-left: 80px; position: absolute;top: -14px">Vishal Agarwal</h4>
+  </div>
+</div>
+
+<div class="manageSecondContainerMazeProject">
+  <p class="manageListOfUsers">List Of Users</p>
+
+  <%@users.each do |user| %>
+    <br>
+    <%= user.first_name %>
+    <%= user.last_name %>
+    <%= user.access_locked? %>
+    <%= button_to 'ban' ,ban_user_path(user) , method: :patch  %>
+  <% end %>
+
+</div>
+

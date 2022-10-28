@@ -725,6 +725,35 @@
 }
 
 
+/*manageUsers*/
+.manageUserManagement{
+    margin-left: 130px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: #9FA0A3;
+    font-size: 28px;
+    top: 5px;
+    position: relative;
+}
+.manageListOfUsers{
+    font-family: 'Inria Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.03em;
+    color: #606165;
+}
+.manageSecondContainerMazeProject{
+    position: relative;
+    background: #F9FAFB;
+    left: 14%;
+    width: 65%;
+    height: auto;
+}
+
+
+
 
 
 

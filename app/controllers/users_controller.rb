@@ -13,3 +13,5 @@ def ban
   redirect_to users_path, notice: "User access locked: #{@user.access_locked?}"
 end
 end
+
+
