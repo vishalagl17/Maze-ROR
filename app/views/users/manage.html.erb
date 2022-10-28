@@ -1,5 +1,10 @@
 <% @users.each do |user| %>
+  <br>
   <strong>email:</strong>
-  <%= user.email user.access_locked? %>
+  <%= user.email %>
+  <strong>access locked?</strong>
+  <%= user.access_locked? %><br>
+  <%= link_to ban_user_path(user), method: :patch %>
+  <%= button_to 'ban', ban_user_path(user), method: :patch %>
   <br>
 <% end %>
