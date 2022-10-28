@@ -1,0 +1,5 @@
+<% @users.each do |user| %>
+  <strong>email:</strong>
+  <%= user.email user.access_locked? %>
+  <br>
+<% end %>

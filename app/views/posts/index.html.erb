@@ -11,7 +11,7 @@
 <div class="sidebar">
   <a class="feedImageButtonSideNavbar"> <%=image_tag("feedImage2.png", style: "margin-right:22px")%> Feed</a>
   <a> <%=image_tag("profileImage.png", style: "margin-right:22px") %>  Profile</a>
-  <a><%=image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
+  <a href="/manage"><%=image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
   <a><%=image_tag("logoutImage.png", style: "margin-right:22px") %><%= link_to "Logout",destroy_user_session_path, data: { "turbo-method": :delete } , class: "logOutButtonMazeSideNavbar" %></a>
   <%= button_to "Logout", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } } %>
 
