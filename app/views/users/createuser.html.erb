@@ -28,29 +28,15 @@
   </div>
 </div>
 
-<div class="manageSecondContainerMazeProject">
-  <p class="manageListOfUsersText">List Of Users</p>
+<div class="createSecondContainerMazeProject">
+  <h1>Add Users</h1>
+  <textarea class="createNameMobileEmail">Add name</textarea><br>
+  <textarea class="createNameMobileEmail">Mobile No.</textarea><br>
+  <textarea class="createNameMobileEmail">Email</textarea>
+
   <%= button_to 'create user',createuser_path, method: :get, class: "managecreateUserButton"%>
 
-  <%@users.each do |user| %>
-    <br>
-    <div class="manageUsersActivateDeactivate">
 
-      <%= image_tag("mazeimage.png") %>
-      <div class="managegreenDotImage"><%=image_tag("greendot.png") %></div>
-
-      <p class="manageUserName"><%= user.first_name %> <%= user.last_name %></p>
-
-      <p class="manageUserNumber"><%= user.phone_number %>  </p>
-      <p class="manageUserEmail">  <%= user.email %></p>
-
-      <%#= user.access_locked? %>
-      <%#= button_to 'ban' ,ban_user_path(user) , method: :patch  %>
-      <%= button_to ban_status(user), ban_user_path(user), method: :patch, class: "manageUsersActivateDeactivateButton" %>
-
-    </div>
-<br>
-  <% end %>
 
 </div>
 

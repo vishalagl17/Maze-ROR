@@ -727,7 +727,7 @@
 
 /*manageUsers*/
 .manageUserManagement{
-    margin-left: 130px;
+    margin-left: 153px;
     line-height: 34px;
     letter-spacing: 0.03em;
     color: #9FA0A3;
@@ -735,7 +735,7 @@
     top: 5px;
     position: relative;
 }
-.manageListOfUsers{
+.manageListOfUsersText{
     font-family: 'Inria Sans';
     font-style: normal;
     font-weight: 700;
@@ -743,6 +743,8 @@
     line-height: 34px;
     letter-spacing: 0.03em;
     color: #606165;
+    padding: 30px;
+    margin-left: 10px;
 }
 .manageSecondContainerMazeProject{
     position: relative;
@@ -750,6 +752,110 @@
     left: 14%;
     width: 65%;
     height: auto;
+}
+.manageUsersActivateDeactivate{
+    padding: 15px;
+    /* padding-top: 10px; */
+    margin-left: 35px;
+    position: relative;
+    width: 92%;
+    height: 46px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: start;
+    top: -35px;
+}
+.manageUserName{
+    margin-left: 65px;
+    margin-right: 105px;
+    font-weight: 600;
+    font-size: 18px;
+    color: #606165;
+}
+.manageUserNumber{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 17px;
+    color: #9FA0A3;
+    /*margin-left: 25px;*/
+    margin-right: 110px;
+}
+.manageUserEmail{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 17px;
+    color: #9FA0A3;
+    margin-right: 150px;
+
+}
+.manageUsersActivateDeactivateButton{
+    width: 132px;
+    height: 34px;
+    margin-left: 220px;
+
+    background: rgba(245, 100, 100, 0.15);
+    border-radius: 14px;
+}
+.managegreenDotImage{
+    margin-left: 40px;
+    margin-top: 14px;
+}
+
+.manageFeedButtonMazeSideNavbarShowPage{
+    position: relative;
+    display: flex;
+    left: 55px;
+    top: -76px;
+    text-decoration: none;
+    color: #2E2F30;
+}
+.managemazeProjectLeftSidebarprofilelogoutImageConatiner{
+    position: relative;
+    top: -75px;
+}
+.managemazeProjectRightSidebar{
+    float: right;
+    position: relative;
+    float: right;
+    margin-right: 360px;
+    top: -73px;
+    width: 300px;
+    height: auto;
+}
+.managemazeProjectRightSidebarTopNavbar{
+    display: flex;
+}
+.managecreateUserButton{
+    position: absolute;
+    width: 173px;
+    height: 41px;
+    left: 1095px;
+    top: 30px;
+    background: #377DFF;
+    border-radius: 14px;
+
+}
+
+
+.createSecondContainerMazeProject{
+    position: relative;
+    background: #F9FAFB;
+    left: 14%;
+    width: 65%;
+    height: auto;
+}
+
+.createNameMobileEmail{
+    position: relative;
+    width: 457px;
+    height: 52px;
+    border: none;
+     border-radius: 14px;
+    margin-left: 10px;
+    padding: 5px;
 }
 
 

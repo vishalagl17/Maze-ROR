@@ -12,6 +12,10 @@ def ban
   end
   redirect_to users_path, notice: "User access locked: #{@user.access_locked?}"
 end
+
+def createuser
+  @user = User.all
+end
 end
 
 

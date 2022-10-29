@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users
 
   get 'manage', to: 'users#manage'
+  get 'createuser', to: 'users#createuser'
 
   resources :users, only: [:manage] do
     member do
