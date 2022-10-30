@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "User") do |sheet|
+  sheet.add_row ['body','comments']
+  @post.each do |post|
+    post.comments.each do |comment|
+    sheet.add_row [post.body, comment.body]
+    end
+  end
+end
+
+
+
+

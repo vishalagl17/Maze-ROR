@@ -57,12 +57,15 @@
       <br>
       <hr color="lightgrey">
       <br>
-    </div>
-    <!--<h2>Add a comment:</h2>-->
-    <%= render 'comments/form' %>
 
-    <h2>Comments</h2>
-    <%= render @post.comments %>
+      <%= render 'comments/form' %>
+
+      <h2 style="color: rgba(96, 97, 101, 0.6);">Comments</h2>
+      <hr color="lightgrey">
+      <%= render @post.comments %>
+
+    </div>
+
   </div>
 </div>
 

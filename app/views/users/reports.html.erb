@@ -1,0 +1,124 @@
+<div class="navbarTopMazeProject">
+  <div class="mazeImgNavbar">
+    <%= image_tag "mazeimage.png" %>
+  </div>
+  <div class="mazeTextNavbar">
+    <h1>Maze</h1>
+  </div>
+  <h1 class="manageUserManagement">User Management</h1>
+</div>
+
+<div class="sidebar">
+  <a><%= image_tag("feedImage2.png", style: "margin-right:22px") %><%= link_to "Feed", root_path(@post), class: "manageFeedButtonMazeSideNavbarShowPage" %> </a>
+
+  <div class="managemazeProjectLeftSidebarprofilelogoutImageConatiner">
+    <a> <%= image_tag("profileImage.png", style: "margin-right:22px") %>  Profile</a>
+    <a><%= image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
+    <a class="feedImageButtonSideNavbar"><%= image_tag("reportsimage.png", style: "margin-right:22px; background-color:grey") %>
+      Reports</a>
+    <a><%= image_tag("logoutImage.png", style: "margin-right:22px") %><%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete }, class: "logOutButtonMazeSideNavbar" %></a>
+    <%#= button_to "Logout", destroy_user_session_path, method: :delete, form: { data: { turbo: :false } } %>
+  </div>
+
+</div>
+
+<div class="managemazeProjectRightSidebar">
+
+  <div class="managemazeProjectRightSidebarTopNavbar">
+    <%= image_tag("userImageEllipse1.png") %>
+    <h2 style="margin-left: 80px; position: absolute;top: -14px">Vishal Agarwal</h2>
+  </div>
+</div>
+
+<div class="reportManageSecondContainerMazeProject">
+  <div class="reportAllUsersW4">
+
+    <div class="reportAllUsersBlueCircle"><%= image_tag("bluecircle.png") %></div>
+    <div class="reportAllUsersCont"><%= image_tag("week4image.png") %></div>
+    <h2 class="reportAllUsersText">All Users</h2>
+    <h6 class="reportPostCommentsText">Posts,comments count</h6>
+    <%#= button_to 'Download',reports_path(format: :csv) %>
+    <div class="reportAllUsersDownloadBUtton"><%= link_to 'Download CSV', reports_path(format: :csv) %></div>
+    <div class="reportAllUsersDownloadBUttonXL"><%=  link_to 'Download Excel', resultxl_path(format: :xlsx)%></div>
+  </div>
+  <div class="reportAllUsersW4">
+
+    <div class="reportAllUsersBlueCircle"><%= image_tag("bluecircle.png") %></div>
+    <div class="reportAllUsersCont"><%= image_tag("week4image.png") %></div>
+    <h2 class="reportAllUsersText">All Users</h2>
+    <h6 class="reportPostCommentsText">having more than 10 posts.users</h6>
+    <div class="reportAllUsersDownloadBUtton"><%= link_to 'Download CSV', postfour_path(format: :csv) %></div>
+    <div class="reportAllUsersDownloadBUttonXL"><%= link_to 'download Excel', posttwoxl_path(format: :xlsx) %></div>
+  </div>
+
+  <div class="reportAllUsersW4">
+
+    <div class="reportAllUsersBlueCircle"><%= image_tag("bluecircle.png") %></div>
+    <div class="reportAllUsersCont"><%= image_tag("week4image.png") %></div>
+    <h2 class="reportAllUsersText">All Users</h2>
+    <h6 class="reportPostCommentsText">Description, Comments</h6>
+
+    <div class="reportAllUsersDownloadBUtton"><%= link_to 'Download CSV', postwise_path(format: :csv) %></div>
+    <div class="reportAllUsersDownloadBUttonXL"><%= link_to 'Download Excel', reportbodyxl_path(format: :xlsx) %></div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <%# form_for(@post) do |f| %>
+    <%#= f.radio_button :contactmethod, 'email', :checked => true %>
+    <%#= label :contactmethod_email, 'Email' %>
+
+  <%# end %>
+
+
+  <!--    <div class="form-group">-->
+  <!--      <%#= f.label :gender %> <br />-->
+  <%#= f.label :gender_male, 'male' %>
+  <%#= f.radio_button :gender, 'male', :checked => true %>
+  <%#= f.label :gender_female, 'female' %>
+  <!--      <%#= f.radio_button :gender, 'female' %><br />-->
+  <!--    </div>-->
+
+
+  <%# radio_button :gender %>

@@ -1,0 +1,10 @@
+<% headers = ['body','comments'] %>
+<%= CSV.generate_line headers %>
+<% @post.each do | post| %>
+  <% post.comments.each do |comment| %>
+    <%= CSV.generate_line([post.body, comment.body]) %>
+  <% end %>
+<% end %>
+
+
+

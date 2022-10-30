@@ -1,9 +1,13 @@
-<!--<p>-->
-<!--  <strong>Commenter:</strong>-->
-  <%#= comment.commenter %>
-<!--</p>-->
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+
+<div style="display: flex">
+  <%= image_tag("mazeimage.png") %>
+  <p class="thirdConatinerShowCommentName"><%= @post.user.first_name %> <%=@post.user.last_name %></p>
+</div>
+<p style="margin-left: 45px"><%= comment.body %></p>
+<hr color="lightgrey">
+
+
+
+
+

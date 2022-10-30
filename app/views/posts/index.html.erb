@@ -11,9 +11,9 @@
 <div class="sidebar">
   <a class="feedImageButtonSideNavbar"> <%=image_tag("feedImage2.png", style: "margin-right:22px")%> Feed</a>
   <a> <%=image_tag("profileImage.png", style: "margin-right:22px") %>  Profile</a>
-  <a href="/manage"><%=image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
+  <a href="/manage", class="ReportsSideBar1"><%=image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
   <a><%=image_tag("logoutImage.png", style: "margin-right:22px") %><%= link_to "Logout",destroy_user_session_path, data: { "turbo-method": :delete } , class: "logOutButtonMazeSideNavbar" %></a>
-  <%= button_to "Logout", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } } %>
+  <%#= button_to "Logout", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } } %>
 
 </div>
 
@@ -114,10 +114,14 @@
         <br>
 
         <div class="thirdConatinerShowComment">
-          <%= post.comments.order('created_at DESC').first&.body %>
+          <div style="display: flex">
+            <%= image_tag("mazeimage.png") %>
+            <p class="thirdConatinerShowCommentName"><%= @post.user.first_name %> <%=@post.user.last_name %></p>
+          </div>
+
+          <p style="margin-left: 45px"><%= post.comments.order('created_at DESC').first&.body %></p>
         </div>
-        <%= render post.comments %>
-      <br>
+        <%#= render post.comments %>
 
       </div>
     <% end %>
@@ -174,10 +178,13 @@
           <br>
 
           <div class="thirdConatinerShowComment">
-            <%= post.comments.order('created_at DESC').first&.body %>
+            <div style="display: flex">
+              <%= image_tag("mazeimage.png") %>
+              <p class="thirdConatinerShowCommentName"><%= @post.user.first_name %> <%=@post.user.last_name %></p>
+            </div>
+
+            <p style="margin-left: 45px"><%= post.comments.order('created_at DESC').first&.body %></p>
           </div>
-          <%= render post.comments %>
-          <br>
 
         </div>
       <% end %>

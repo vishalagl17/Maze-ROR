@@ -68,6 +68,9 @@ gem 'devise'
 gem "rolify"
 gem 'awesome_print', '~> 1.8'
 
+gem 'caxlsx'
+gem 'caxlsx_rails'
+
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"

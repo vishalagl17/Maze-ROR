@@ -1,0 +1,14 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "User") do |sheet|
+  sheet.add_row ['firstname', 'lastname', 'Post count', 'Comment count']
+  @user.each do |user|
+    Post.all.where(user_id: user.id).each do |post|
+    sheet.add_row [user.first_name, user.last_name, Post.all.where(user_id: user.id).count, Comment.all.where(user_id: user.id, post_id: post.id).count]
+    end
+  end
+end
+
+
+
+

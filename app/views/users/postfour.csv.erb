@@ -1,0 +1,16 @@
+
+<% headers = ['First Name','Last Name','post Count','Comment Count'] %>
+<%= CSV.generate_line headers %>
+<% @user.each do |user| %>
+
+  <% Post.all.where(user_id: user.id).each do |post| %>
+  <% if Post.all.where(user_id: user.id).count > 2 %>
+  <%= CSV.generate_line([user.first_name, user.last_name, Post.all.where(user_id: user.id).count, Comment.all.where(user_id: user.id, post_id: post.id).count]) %>
+  <% else %>
+  <%= CSV.generate_line(['nil','nil','nil','nil']) %>
+<% end %>
+<% end %>
+<% end %>
+
+
+
