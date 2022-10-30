@@ -16,6 +16,11 @@ end
 def createuser
   @user = User.all
 end
+
+def reports
+  @user =User.all
+end
+
 end
 
 
