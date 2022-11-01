@@ -9,6 +9,7 @@
 </div>
 
 <div class="sidebar">
+<<<<<<< HEAD
   <a><%= image_tag("feedImage2.png", style: "margin-right:22px") %><%= link_to "Feed", root_path(@post), class: "manageFeedButtonMazeSideNavbarShowPage" %> </a>
 
   <div class="managemazeProjectLeftSidebarprofilelogoutImageConatiner">
@@ -18,6 +19,16 @@
       Reports</a>
     <a><%= image_tag("logoutImage.png", style: "margin-right:22px") %><%= link_to "Logout", destroy_user_session_path, data: { "turbo-method": :delete }, class: "logOutButtonMazeSideNavbar" %></a>
     <%#= button_to "Logout", destroy_user_session_path, method: :delete, form: { data: { turbo: :false } } %>
+=======
+  <a><%=image_tag("feedImage2.png", style: "margin-right:22px")%><%= link_to "Feed", root_path(@post) , class: "manageFeedButtonMazeSideNavbarShowPage" %> </a>
+
+  <div class="managemazeProjectLeftSidebarprofilelogoutImageConatiner">
+    <a> <%=image_tag("profileImage.png", style: "margin-right:22px") %>  Profile</a>
+    <a  ><%=image_tag("manageUser.png", style: "margin-right:22px") %>Manage User</a>
+    <a class="feedImageButtonSideNavbar"><%= image_tag("reportsimage.png", style: "margin-right:22px; background-color:grey") %>Reports</a>
+    <a><%=image_tag("logoutImage.png", style: "margin-right:22px") %><%= link_to "Logout",destroy_user_session_path, data: { "turbo-method": :delete } , class: "logOutButtonMazeSideNavbar" %></a>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, form: {  data: { turbo: :false } } %>
+>>>>>>> origin/vishalweek3
   </div>
 
 </div>
@@ -30,6 +41,7 @@
   </div>
 </div>
 
+<<<<<<< HEAD
 <div class="reportManageSecondContainerMazeProject">
   <div class="reportAllUsersW4">
 
@@ -122,3 +134,11 @@
 
 
   <%# radio_button :gender %>
+=======
+<div class="manageSecondContainerMazeProject">
+  <h1>hello</h1>
+
+  <%#= link_to 'export users', reports_path(format: :csv) %>
+
+</div>
+>>>>>>> origin/vishalweek3
